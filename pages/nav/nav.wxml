@@ -1,0 +1,35 @@
+<!--pages/nav/nav.wxml-->
+<view class='content'>
+  <view class='item color1'>
+    <view class='cardContent'>
+      <view class='item_title'>青春标签</view>
+      <view class='item_title2'>Youth Label</view>
+      <view class='item_dis'>一个时代的精神，是青年代表的精神；一个时代的性格，是青春代表的性格</view>
+      <image class='tag_img' src='../../utils/img/tag_youth.png'></image>
+    </view>
+  </view>
+  <view class='item color2' bindtap='navigateToStep'>
+    <view class='cardContent'>
+      <view class='item_title'>微信运动步数</view>
+      <view class='item_title2'>WeChat Step Number</view>
+      <view class='item_dis'>你用行动述说着过程的重要，没有无尽的终点，没有无法攀登的险峰</view>
+      <image class='tag_img2' src='../../utils/img/tag_step.png'></image>
+    </view>
+  </view>
+  <view class='item color3'>
+    <view class='cardContent'>
+      <view class='item_title'>微信九宫格配图</view>
+      <view class='item_title2'>WeChat Squared Figure</view>
+      <view class='item_dis'>人与人之间的相貌、性格不可能完全一样，每个人都是独特的。这是神早就预定的</view>
+      <image class='tag_img' src='../../utils/img/tag_p.png'></image>
+    </view>
+  </view>
+  <view class='item color4'>
+    <view class='cardContent'>
+      <view class='item_title'>抽取我的卡片</view>
+      <view class='item_title2'>Pick Up My Card</view>
+      <view class='item_dis'>一个人只有心存美的意象，才能看到窗外的美景</view>
+      <image class='tag_img' src='../../utils/img/tag_pick.png'></image>
+    </view>
+  </view>
+</view>

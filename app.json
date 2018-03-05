@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/nav/nav",
+    "pages/logs/logs",
+    "pages/index/index",
+    "pages/step/step"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "值得",
+    "navigationBarTextStyle": "black"
+  }
+}

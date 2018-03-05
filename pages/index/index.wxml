@@ -1,0 +1,20 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='box, {{ani}}'>
+    <view class='wave -one'></view>
+    <view class='wave -two'></view>
+    <view class='wave -three'></view>
+    <view class="userinfo">
+      <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+      <block wx:else>
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      </block>
+      <view class="usermotto">
+        <text class="user-motto">欢迎，{{userInfo.nickName}}</text>
+      </view>
+      <view class="start" bindtap='goToList'>
+        <text>进入值得世界</text>
+      </view>
+    </view>
+  </view>
+</view>

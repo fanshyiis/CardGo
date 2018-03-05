@@ -1,0 +1,45 @@
+<!--logs.wxml-->
+<view class="container log-list">
+  <swiper current="IndexZhide" style='width: 100%; height: 100%' duration="200" circular="true" bindchange="changeZhide">
+    <block wx:key="{{index}}" wx:for="{{zhideList}}" wx:for-item="item" wx:if="{{zhideList.length > 0}}">
+      <swiper-item>
+        <image bindtap='headerTip' class="headImg animated {{animateM}}" src='{{item.belong.avatar.url}}'></image>
+        <view class="box animated {{IndexZhide === index? animateC : ''}}">
+          <view wx:if="{{!item.moreContent}}">
+            <view class='wave -one' style='{{index % 2 === 0? colorChoose : colorChoose1}}'></view>
+            <view class='wave -two' style='{{index % 2 === 0? colorChoose : colorChoose1}}'></view>
+            <view class='wave -three' style='{{index % 2 === 0? colorChoose : colorChoose1}}'></view>
+            <view class="title">
+              <text class="title_text">{{item.ZD_title}}</text>
+            </view>
+            <view class='inline'></view>
+            <view class="date">{{item.Time}}</view>
+            <view class="do">“</view>
+            <view class="content">
+              {{item.ZD_summary}}
+            </view>
+            <view class="do2">”</view>
+            <view class="rate">{{item.Rate}}</view>
+            <view class='author'>
+              @ {{item.belong.Nick}}
+            </view>
+            <!-- <view class='rateGo' hover-class='rateGoHover' bindtouchstart='pressStart' bindtouchend='pressEnd' style='height:{{110 + pressTime * 10}}rpx!important'>
+            <text>{{btnText}}</text>
+            </view> -->
+          </view>
+          <scroll-view scroll-y wx:if="{{item.moreContent}}" style='width:100%;height:100%'>
+            <image mode="aspectFill" class="backgroundImg" src='{{item.mainPic.url}}'>
+              <text>ddddd</text>
+            </image>
+            <view class="title2">
+              <text class="title_text">{{item.ZD_title}}</text>
+            </view> 
+            <view class='inline'></view>
+            <view class="sum">{{item.ZD_summary}}</view>
+            <view class="sum">{{item.ZD_summary}}</view>
+          </scroll-view>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
